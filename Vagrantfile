@@ -7,35 +7,39 @@
 # you're doing.
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/jessie64"
-
   config.vm.provision 'shell', path: 'bootstrap/puppet.sh'
   
-  config.vm.define 'puppetmaster', autostart: true do |node|
-    node.vm.hostname = 'puppetmaster.v.bbvsws.de'
-    node.vm.network 'private_network', ip: '192.168.179.12'
-    
+  config.vm.define 'puppet', autostart: true do |node|
+    node.vm.hostname = 'puppet.v.bbvsws.de'
+    node.vm.network 'private_network', ip: '192.168.179.12'    
     node.vm.provider 'virtualbox' do |vb|
       # noinspection RubyResolve
-      vb.memory = 1024
+      vb.memory = 4096 
+	  vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]  
     end
   end
   
-  config.vm.define 'puppetclient1', autostart: true do |node|
-    node.vm.hostname = 'puppetclient1.v.bbvsws.de'
+  config.vm.define 'client1', autostart: true do |node|
+    node.vm.hostname = 'client1.v.bbvsws.de'
     node.vm.network 'private_network', ip: '192.168.179.13'    
     node.vm.provider 'virtualbox' do |vb|
       # noinspection RubyResolve
-      vb.memory = 512
+      vb.memory = 1024
+	  vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]  
     end
   end
   
-  config.vm.define 'puppetclient2', autostart: true do |node|
-    node.vm.hostname = 'puppetclient2.v.bbvsws.de'
+  config.vm.define 'client2', autostart: true do |node|
+    node.vm.hostname = 'client2.v.bbvsws.de'
     node.vm.network 'private_network', ip: '192.168.179.14'    
     node.vm.provider 'virtualbox' do |vb|
       # noinspection RubyResolve
-      vb.memory = 512
+      vb.memory = 1024
+	  vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]  
     end
   end
  
+ config.vm.provider :virtualbox do |vb|
+	vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+  end
 end
