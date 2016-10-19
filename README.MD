@@ -58,7 +58,7 @@ Standardmäßig sind zwei clients eingerichtet. Die folgenden Schritte sind für
 
 
 > sudo /opt/puppetlabs/bin/puppet cert list
-> sudo /opt/puppetlabs/bin/puppet cert sign <NAME>
+> sudo /opt/puppetlabs/bin/puppet cert sign "NAME"
 
  
 #### Auf dem Client:
