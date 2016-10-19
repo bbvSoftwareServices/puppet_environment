@@ -11,7 +11,7 @@ Dieses Projekt benötigt zur Installation folgende Komponenten für einen erfolg
 Windows 10
 ----------
 
-Unter Windows 10 muss die Datei "C:\Windows\System\32\drivers\etc\hosts"  angepasst werden.
+Unter Windows 10 muss die Datei "C:\Windows\System32\drivers\etc\hosts"  angepasst werden.
 Folgender Inhalt sollte dort ergänzt werden : 
 
 >192.168.179.12 puppet.v.bbvsws.de
