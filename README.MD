@@ -21,7 +21,7 @@ Folgender Inhalt sollte dort ergänzt werden :
 Linux
 -----
 
-Unter Linxu muss obiger Inhalt in der Datei "/etc/resolv.conf" ergänzt werden.
+Unter Linux muss obiger Inhalt in der Datei "/etc/resolv.conf" ergänzt werden.
 
 
 Starten der VMs
