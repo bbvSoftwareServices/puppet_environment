@@ -63,7 +63,7 @@ Standardmäßig sind zwei clients eingerichtet. Die folgenden Schritte sind für
  
 #### Auf dem Client:
 
-
+> sudo /opt/puppetlabs/bin/puppet agent --test --server puppet.v.bbvsws.de 
 > sudo /opt/puppetlabs/bin/puppetdb ssl-setup -f
  
 Standardmäßig ist ein automatisches Update der clients nicht eingerichtet, da dies beim Testen stören würde.
