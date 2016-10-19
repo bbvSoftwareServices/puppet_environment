@@ -38,6 +38,7 @@ Konfigurieren des Puppet Servers
 Nun sind noch einige Nacharbeiten notwendig um die Puppet Testumgebung aufzubauen. In diesem Schritt richten wir den Puppetserver ein. Auf "puppet.v.bbvsws.de" muss der puppetserver noch gestartet werden. Dies erfolgt folgendermaßen:
 
 > vagrant ssh puppet
+
 > sudo service puppetserver start
 
 Konfigurieren der Puppet Clients
@@ -48,19 +49,22 @@ Standardmäßig sind zwei clients eingerichtet. Die folgenden Schritte sind für
 #### Auf dem Client:
 
 
-> vagrant ssh client1
+> vagrant ssh client1 
+
 > sudo /opt/puppetlabs/bin/puppet agent --test --server puppet.v.bbvsws.de 
 
 #### Auf dem Server:
 
 
 > sudo /opt/puppetlabs/bin/puppet cert list
+
 > sudo /opt/puppetlabs/bin/puppet cert sign "NAME"
 
  
 #### Auf dem Client:
 
 > sudo /opt/puppetlabs/bin/puppet agent --test --server puppet.v.bbvsws.de 
+
 > sudo /opt/puppetlabs/bin/puppetdb ssl-setup -f
  
 #### Aktualisieren des Clients
