@@ -66,7 +66,7 @@ Auf dem Server:
  Anmerkungen
  -----------
  
- Es wurd Puppet 4.7 installiert. Die allermeisten Tutorials im Internet setzen noch auf eine Puppet Verssion 3 oder kleiner. Damit stimmen in diesen Tutorials 
+ Es wird Puppet 4.7 installiert. Die allermeisten Tutorials im Internet setzen noch auf eine Puppet Verssion 3 oder kleiner. Damit stimmen in diesen Tutorials 
  die Pfade nicht.
  Ein korrekte Pfadangabe für Puppet 4.7 findet sich unter:
  
