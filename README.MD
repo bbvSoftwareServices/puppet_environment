@@ -54,7 +54,7 @@ Standardmäßig sind zwei clients eingerichtet. Die folgenden Schritte sind für
 > vagrant ssh client1
 > sudo /opt/puppetlabs/bin/puppet agent --test --server puppet.v.bbvsws.de 
 
-####Auf dem Server:
+#### Auf dem Server:
 
 
 > sudo /opt/puppetlabs/bin/puppet cert list
