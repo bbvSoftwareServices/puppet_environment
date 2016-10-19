@@ -4,8 +4,10 @@ export PATH=/sbin:/usr/sbin:/bin:/usr/bin
 
 # Bootstrap puppet on Debian 8 (Jessie) with the Debian 7 (Wheezy)
 # release repo from puppetlabs, because Jessies repo is empty (20151221).
+# Bootstrap apt-transport-https use for debian repositories via https
 apt-get install -y apt-transport-https
-apt-get install -y joe mc
+# Install mc git joe
+apt-get install -y joe mc git
 if ! dpkg -s puppet >/dev/null 2>&1; then
     echo Bootstrapping puppet
     if ! dpkg -s puppetlabs-release >/dev/null 2>&1; then		
@@ -22,7 +24,7 @@ if ! dpkg -s puppet >/dev/null 2>&1; then
 fi
 apt-get -y upgrade
 
-# Bootstrap apt-transport-https use for debian repositories via https
+
 
 
 # EOF
