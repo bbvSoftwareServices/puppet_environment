@@ -53,23 +53,23 @@ Auf dem Client:
 > sudo /opt/puppetlabs/bin/puppet agent --test --server puppet.v.bbvsws.de 
 
 Auf dem Server:
- > sudo /opt/puppetlabs/bin/puppet cert list
- > sudo /opt/puppetlabs/bin/puppet cert sign <NAME>
+> sudo /opt/puppetlabs/bin/puppet cert list
+> sudo /opt/puppetlabs/bin/puppet cert sign <NAME>
  
- Auf dem Client:
- > sudo /opt/puppetlabs/bin/puppetdb ssl-setup -f
+Auf dem Client:
+> sudo /opt/puppetlabs/bin/puppetdb ssl-setup -f
  
- Standardmäßig ist ein automatisches Update der clients nicht eingerichtet, da dies beim Testen stören würde.
- Ein Update auf einem Client kann durch den Befehl 
- > sudo /opt/puppetlabs/bin/puppet agent --test --server puppet.v.bbvsws.de jederzeit angestoßen werden.
+Standardmäßig ist ein automatisches Update der clients nicht eingerichtet, da dies beim Testen stören würde.
+Ein Update auf einem Client kann durch den Befehl 
+> sudo /opt/puppetlabs/bin/puppet agent --test --server puppet.v.bbvsws.de jederzeit angestoßen werden.
  
- Anmerkungen
- -----------
+Anmerkungen
+-----------
  
- Es wird Puppet 4.7 installiert. Die allermeisten Tutorials im Internet setzen noch auf eine Puppet Verssion 3 oder kleiner. Damit stimmen in diesen Tutorials 
- die Pfade nicht.
- Ein korrekte Pfadangabe für Puppet 4.7 findet sich unter:
+Es wird Puppet 4.7 installiert. Die allermeisten Tutorials im Internet setzen noch auf eine Puppet Verssion 3 oder kleiner. Damit stimmen in diesen Tutorials 
+die Pfade nicht.
+Ein korrekte Pfadangabe für Puppet 4.7 findet sich unter:
  
- * [Puppetpfadangaben](https://docs.puppet.com/puppet/4.7/reference/dirs_codedir.html)
+* [Puppetpfadangaben](https://docs.puppet.com/puppet/4.7/reference/dirs_codedir.html)
  
 
