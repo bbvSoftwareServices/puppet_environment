@@ -31,14 +31,11 @@ Mit
 
 > vagrant up
 
-kann Initial die Umgebung eingerichtet und angestartet werden. Da Vagrant dafü einige Downlaods durchführt wird für das Setup
-einige Zeit in Anspruch genommen. Zum Ende dieses Zeitpunktes stehen drei virtuelel Maschinen zur Verfügung die alle mit Puppet bestückt sind.
-Allerdings ist Puppet dann noch nicht für den Einsatz konfiguriert.
+kann Initial die Umgebung eingerichtet und angestartet werden. Da Vagrant dafü einige Downlaods durchführt wird für das Setup einige Zeit in Anspruch genommen. Zum Ende dieses Zeitpunktes stehen drei virtuelel Maschinen zur Verfügung die alle mit Puppet bestückt sind. Allerdings ist Puppet dann noch nicht für den Einsatz konfiguriert.
  
 Konfigurieren des Puppet Servers
 --------------------------------
-Nun sind noch einige Nacharbeiten notwendig um die Puppet Testumgebung aufzubauen. In diesem Schritt richten wir den Puppetserver ein.
-auf "puppet.v.bbvsws.de" muss der puppetserver noch gestartet werden. Dies erfolgt folgendermaßen:
+Nun sind noch einige Nacharbeiten notwendig um die Puppet Testumgebung aufzubauen. In diesem Schritt richten wir den Puppetserver ein. Auf "puppet.v.bbvsws.de" muss der puppetserver noch gestartet werden. Dies erfolgt folgendermaßen:
 
 > vagrant ssh puppet
 > sudo service puppetserver start
@@ -66,8 +63,9 @@ Standardmäßig sind zwei clients eingerichtet. Die folgenden Schritte sind für
 > sudo /opt/puppetlabs/bin/puppet agent --test --server puppet.v.bbvsws.de 
 > sudo /opt/puppetlabs/bin/puppetdb ssl-setup -f
  
-Standardmäßig ist ein automatisches Update der clients nicht eingerichtet, da dies beim Testen stören würde.
-Ein Update auf einem Client kann durch den Befehl 
+#### Aktualisieren des Clients
+
+Standardmäßig ist ein automatisches Update der clients nicht eingerichtet, da dies beim Testen stören würde. Ein Update auf einem Client kann durch den Befehl 
 > sudo /opt/puppetlabs/bin/puppet agent --test --server puppet.v.bbvsws.de 
 
 jederzeit angestoßen werden.
@@ -77,8 +75,7 @@ Anmerkungen
 -----------
 
  
-Es wird Puppet 4.7 installiert. Die allermeisten Tutorials im Internet setzen noch auf eine Puppet Version 3 oder kleiner. Damit stimmen in diesen Tutorials 
-die Pfade nicht.
+Es wird Puppet 4.7 installiert. Die allermeisten Tutorials im Internet setzen noch auf eine Puppet Version 3 oder kleiner. Damit stimmen in diesen Tutorials die Pfade nicht.
 Ein korrekte Pfadangabe für Puppet 4.7 findet sich unter:
  
 * [Puppetpfadangaben](https://docs.puppet.com/puppet/4.7/reference/dirs_codedir.html)
