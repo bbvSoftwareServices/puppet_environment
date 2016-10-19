@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
     node.vm.network 'private_network', ip: '192.168.179.13'    
     node.vm.provider 'virtualbox' do |vb|
       # noinspection RubyResolve
-      vb.memory = 1024
+      vb.memory = 2048
 	  vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]  
     end
   end
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
     node.vm.network 'private_network', ip: '192.168.179.14'    
     node.vm.provider 'virtualbox' do |vb|
       # noinspection RubyResolve
-      vb.memory = 1024
+      vb.memory = 2048
 	  vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]  
     end
   end
