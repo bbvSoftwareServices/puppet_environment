@@ -14,9 +14,9 @@ Windows 10
 Unter Windows 10 muss die Datei "C:\Windows\System32\drivers\etc\hosts"  angepasst werden.
 Folgender Inhalt sollte dort ergänzt werden : 
 
->192.168.179.12 puppet.v.bbvsws.de
+>192.168.179.12 puppet.v.bbvsws.de</br>
 >192.168.179.13 client1.v.bbvsws.de</br>
->192.168.179.14 client2.v.bbvsws.de
+>192.168.179.14 client2.v.bbvsws.de</br>
 
 Linux
 -----
