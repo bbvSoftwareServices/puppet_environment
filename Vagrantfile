@@ -9,6 +9,11 @@ Vagrant.configure("2") do |config|
   config.vm.box = "debian/jessie64"
   config.vm.provision 'shell', path: 'bootstrap/puppet.sh'
   
+  config.vm.provider :virtualbox do |vb|
+	vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+	vb.linked_clone = true
+  end
+  
   config.vm.define 'puppet', autostart: true do |node|
     node.vm.hostname = 'puppet.v.bbvsws.de'
     node.vm.network 'private_network', ip: '192.168.179.12'    
@@ -38,8 +43,19 @@ Vagrant.configure("2") do |config|
 	  vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]  
     end
   end
- 
- config.vm.provider :virtualbox do |vb|
-	vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+
+  config.vm.define 'client3', autostart: true do |node|
+    node.vm.hostname = 'client3.v.bbvsws.de'
+    node.vm.network 'private_network', ip: '192.168.179.15'    
+    node.vm.provider 'virtualbox' do |vb|
+      # noinspection RubyResolve
+      vb.memory = 2048
+	  vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]  
+    end
   end
+
+  
+
+ 
+ 
 end
